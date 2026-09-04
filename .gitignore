@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+build/
+dist/
+build_dir/
+*.log
+batch_failed_links.txt
+.venv/
+venv/
+Bin/*
+!Bin/ico.ico

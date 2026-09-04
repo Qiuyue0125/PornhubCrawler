@@ -1,0 +1,8 @@
+beautifulsoup4
+numpy
+opencv-python
+Pillow
+PyInstaller
+requests
+selenium
+urllib3

@@ -1,0 +1,68 @@
+{
+    "_desc": "视频下载器核心配置 - 修改后重启程序生效",
+    "_rule": "以_开头的为说明字段（_UI_MODE除外），程序不会显示这些配置项",
+    "_UI_MODE": 1,
+    "_UI_MODE_DESC": "隐藏界面模式：0=简化文件管理页，1=完整文件管理页",
+    "download": {
+        "_d_desc": "下载核心参数（数值均为整数）",
+        "_d_01": "失败分片全局重试次数（整体任务层面）",
+        "DEFAULT_MAX_GLOBAL_RETRIES": 3,
+        "_d_02": "下载线程数（建议≤30，避免被封禁）",
+        "DEFAULT_MAX_WORKERS": 20,
+        "_d_03": "批量下载间隔（秒），防止请求过快",
+        "DEFAULT_BATCH_INTERVAL": 10,
+        "_d_04": "TS分片单分片最大重试次数",
+        "DEFAULT_MAX_RETRIES": 5,
+        "_d_05": "TS分片连接超时（秒）",
+        "DEFAULT_TS_TIMEOUT_CONNECT": 15,
+        "_d_06": "TS分片读取超时（秒）",
+        "DEFAULT_TS_TIMEOUT_READ": 60,
+        "_d_07": "TS下载块大小（字节，2097152=2MB）",
+        "DEFAULT_CHUNK_SIZE": 2097152,
+        "_d_08": "M3U8整体下载超时（秒）",
+        "DEFAULT_DOWNLOAD_TIMEOUT": 30,
+        "_d_09": "M3U8解析单链接最大重试次数",
+        "DEFAULT_M3U8_MAX_RETRIES": 9,
+        "_d_10": "M3U8解析超时时间（秒）",
+        "DEFAULT_M3U8_TIMEOUT": 45,
+        "_d_11": "M3U8解析重试延迟（秒）",
+        "DEFAULT_M3U8_RETRY_DELAY": 20,
+        "_d_12": "批量下载默认提取页数",
+        "DEFAULT_DOWNLOAD_PAGE": 1,
+        "_d_13": "批量下载默认跳过视频数",
+        "DEFAULT_JUMP_PAGE": 0,
+        "_d_14": "视频解析单链接最大重试次数",
+        "DEFAULT_VIDEO_MAX_RETRIES": 5,
+        "_d_15": "视频解析超时时间（秒）",
+        "DEFAULT_VIDEO_TIMEOUT": 20,
+        "_d_16": "视频解析重试延迟（秒）",
+        "DEFAULT_VIDEO_RETRY_DELAY": 3
+    },
+    "paths": {
+        "_p_desc": "文件存储路径配置",
+        "_p_01": "视频输出目录（绝对路径或相对路径）",
+        "OUTPUT_DIR_ABSOLUTE": "D:/game"
+    },
+    "urls": {
+        "_u_desc": "默认下载链接配置",
+        "_u_01": "批量下载链接列表，格式：[['视频名称', '链接'], ...]",
+        "BATCH_VIDEO_LINKS": [
+            [
+                "推荐视频",
+                "https://cn.pornhub.com/recommended?page=1"
+            ],
+            [
+                "每周最热",
+                "https://cn.pornhub.com/video?o=ht&page=1"
+            ],
+            [
+                "最新视频",
+                "https://cn.pornhub.com/video?o=cm&page=1"
+            ]
+        ],
+        "_u_02": "单视频默认下载链接",
+        "DEFAULT_SINGLE_VIDEO_URL": "",
+        "_u_03": "上次批量下载URL（自动维护，无需手动修改）",
+        "LAST_BATCH_URL": "https://example.com/list"
+    }
+}
